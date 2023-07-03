@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" class="js">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bienvenidos a mi Boda</title>
+        <link rel="stylesheet" media="screen" type="text/css" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+    </head>
+    <body>
+       <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <p>Es Nuestra Boda</p>
+                <h1 class="spacing-top-20">Laura<br><span style="font-weight: 200;font-style: italic;text-transform: lowercase;">y</span> Omar</h1>
+                <h2>14 - 10 - 2023</h2>
+                <p>Sábado 5:00 pm</p>
+                <p class="spacing-top-50">Iglesia Divina Misericordia</p>
+                <p>Cra 70 # 85A Esquina</p>
+                <p class="spacing-top-50 italic-text">Confirmación asistencia</p>
+                <p>↓</p>
+                <button class="btn-avanzar">Aquí</button>
+              </div>
+              <div class="slide">
+                <p class="descripcion">Para nosotros es muy importante que seas testigo de nuestra boda, 
+                  ingresa tu nombre y apellido en el campo de abajo y si estás en nuestra 
+                  lista de invitados tendrás la opción de confirmar tu asistencia</p>
+                  <form id="form_name" action="">
+                    <label>Ingresa tu Nombre y Apellido</label>
+                    <input id="name_guest" type="text" required="required" placeholder="Nombre y Apellido" value="">
+                    <p id="empty_name" class="text-validation d-none">Por favor ingresa tu nombre</p>
+                    <p id="validation-name" class="text-validation d-none">Lo siento, tu nombre no está en la lista de invitados</p>
+                  </form>
+                <button class="btn-avanzar">Confirmar</button>
+              </div>
+              <div class="slide big-height">
+                <p class="descripcion">Hola <b><span id="guest_name"></span></b>, estás invitado(a) a nuestra boda, 
+                  tienes <b><span id="guest_number"></span></b> cupos disponibles para asistir a nuestra boda.</p>
+                <p class="descripcion spacing-top-20"><b>Información general de la boda</b></p>
+                <div class="caja-info">
+                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha</b></p>
+                  <p class="descripcion-box">Octubre 14, 2023</p>
+                  <p class="descripcion-box">Hora: 5:00pm</p>
+                </div>
+                <div class="caja-info">
+                  <p class="descripcion-box"><i class="fa-solid fa-envelope" style="color: #3e3e3d;"></i><b> Lluvia de Sobres</b></p>
+                  <p class="descripcion-box">Contar con ustedes es nuestro mejor regalo. Pero si le desean pueden hacernos un obsequio.</p>
+                </div>
+                <div class="caja-info">
+                  <p class="descripcion-box"><i class="fa-solid fa-location-dot" style="color: #3e3e3d;"></i><b> Iglesia Divina Misericordia</b></p>
+                  <p class="descripcion-box">Cra 70 # 85A Esquina.</p>
+                </div>
+                <div class="caja-info">
+                  <p class="descripcion spacing-top-20"><b>Código de Vestimenta para Hombres y Mujéres</b></p>
+                  <img class="img-vest" src="assets/img/cod-vest.png">
+                  <p class="descripcion-box"><b>Hombres.</b></p>
+                  <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
+                  <p class="descripcion-box"><b>Mujeres.</b></p>
+                  <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
+                </div>
+                <!-- Estructura Acordeon -->
+                
+                  <p class="descripcion spacing-top-20"><b>Invitados a la boda</b></p>
+                  <p class="descripcion">A continuación veras los invitados que se te asignaron para ir a la boda, debes escoger si va a ir o no cada invitado</p>
+                  <div class="spacing-top-20"></div>
+                  <!-- Dentro de este Div se inserta el código de los invitados   -->
+                  <div id="inv_principal" class="accordion"></div>
+               <!--  <details>
+                  <summary>Invitado Principal</summary>                 
+                <div class="caja-info">
+                  <p class="descripcion spacing-top-20"><b>Platos de Comida</b></p>
+                  <p class="descripcion">Escoge entre estos platos cual piensas consumir el día de nuestra boda:</p>
+                  <form action="">
+                    <img class="img-vest" src="assets/img/carne.jpeg">
+                      <p class="descripcion-box"><b>Carne a la Marinera.</b></p>
+                      <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
+                      <input type="radio" id="carne" value="carne">
+                      <label for="carne">Escoger este plato</label> 
+                    <img class="img-vest" src="assets/img/salmon.jpeg">
+                      <p class="descripcion-box"><b>Salmón.</b></p>
+                      <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
+                      <input type="radio" id="salmon" value="salmon">
+                      <label for="salmon">Escoger este plato</label> 
+                      <button type="submit" value="Enviar">Enviar</button>
+                  </form>  
+                </div>
+              </details> -->
+                <button class="btn-avanzar">Avanzar</button>
+              </div>
+            </div>
+          </div>
+          <script src="https://kit.fontawesome.com/67a8a0ad5f.js" crossorigin="anonymous"></script>
+          <script src="view.js"></script>
+    </body>
+</html>
