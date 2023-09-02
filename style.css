@@ -16,7 +16,7 @@ body{
   
   .slider {
     width: 300%;
-    *height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,9 @@ body{
   }
   .slider2{
     height: 100%;
+  }
+  .slider_thanks {
+    width: 100%;
   }
   
   .slide {
@@ -107,21 +110,25 @@ body{
   }
   .descripcion{
     text-transform: none;
-    line-height: 20px;
+    line-height: 1.3em;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.3em;
     letter-spacing: normal;
   }
   form{
     margin-top: 20px;
   }
   label{
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3e3e3d;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
     display: block;
   }
   .l-guest{
-    display: inline;
+    display: inline-block;
+    width: 20px;
     font-size: 16px;
     color: #3e3e3d;
     margin: 10px auto;
@@ -130,10 +137,18 @@ body{
   }
   input[type="text"]{
     margin: 10px;
-    width: 80%;
+    width: 90%;
     padding: 10px;
     border-radius: 5px;
     border: #3e3e3d 1px solid;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+  }
+  .center-input {
+    display: block;
+    width: 40px;
+    margin: 0 auto;
   }
   .caja-info{
     border: #3e3e3d 1px solid;
@@ -150,9 +165,9 @@ body{
   }
   .descripcion-box{
     text-transform: none;
-    line-height: 20px;
+    line-height: 1.2em;
     text-align: center;
-    font-size: 16px;
+    font-size: 1.2em;
     letter-spacing: normal;
     text-align: left;
   }
@@ -188,7 +203,7 @@ body{
   .accordion-toggle,
   .accordion-header{
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
+    font-size: 1.2em;
     width: 100%;
     height: 3em;
     margin: 0;
@@ -246,7 +261,13 @@ body{
   .accordion-toggle:checked + .accordion-header {
     background-color: #fff;
   }
-  
+  .v-guess{
+    color: red;
+    font-size: 12px;
+    width: 45%;
+    margin: 0 auto;
+    padding: 0;
+  }
 
   @media only screen and (max-width: 768px) {
      /* .slide {
@@ -274,7 +295,7 @@ body{
       letter-spacing: 4px;
       color: #3e3e3d;
     }
-    h2{
+    h2 {
       font-size: 41px;
       text-align: right;
       font-family: 'Cormorant Garamond', serif;
@@ -282,31 +303,32 @@ body{
       margin: 20px 0 10px 0;
       color: #3e3e3d;
     }
-    p{
+    p {
       text-align: right;
       font-family: 'Josefin Sans', sans-serif;
       font-weight: 200;
-      font-size: 12px;
+      font-size: 1em;
       margin: 5px 0px;
       text-transform: uppercase;
       letter-spacing: 4px;
       color: #3e3e3d;
     }
-    .slider{
+    .slider {
       align-items: flex-start;
       height: 100vh;
     }
-    .slider2{
+    .slider2 {
       height: 100%;
     }
     .slide {
       width: 100%;
       height: 100%;
       margin-top: 150px;
-      padding-right: 40px;
-      padding-left: 40px;
+      margin-bottom: 50px;
+      padding-right: 20px;
+      padding-left: 20px;
     }
-    .slider-container{
+    .slider-container {
       background: url('assets/img/bg-movil.jpeg') center center/cover no-repeat fixed;
       width: 100%;
       height: 100%;

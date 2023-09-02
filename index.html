@@ -27,7 +27,7 @@
                   ingresa tu nombre y apellido en el campo de abajo y si estás en nuestra 
                   lista de invitados tendrás la opción de confirmar tu asistencia</p>
                   <form id="form_name" action="">
-                    <label>Ingresa tu Nombre y Apellido</label>
+                    <label class="field-guess">Ingresa tu Nombre y Apellido</label>
                     <input id="name_guest" type="text" required="required" placeholder="Nombre y Apellido" value="">
                     <p id="empty_name" class="text-validation d-none">Por favor ingresa tu nombre</p>
                     <p id="validation-name" class="text-validation d-none">Lo siento, tu nombre no está en la lista de invitados</p>
@@ -36,12 +36,12 @@
               </div>
               <div class="slide big-height">
                 <p class="descripcion">Hola <b><span id="guest_name"></span></b>, estás invitado(a) a nuestra boda, 
-                  tienes <b><span id="guest_number"></span></b> cupos disponibles para asistir a nuestra boda.</p>
+                 <p id="text_guess" class="descripcion"></p>
                 <p class="descripcion spacing-top-20"><b>Información general de la boda</b></p>
                 <div class="caja-info">
                   <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha</b></p>
                   <p class="descripcion-box">Octubre 14, 2023</p>
-                  <p class="descripcion-box">Hora: 5:00pm</p>
+                  <p class="descripcion-box">Hora: 8:00pm</p>
                 </div>
                 <div class="caja-info">
                   <p class="descripcion-box"><i class="fa-solid fa-envelope" style="color: #3e3e3d;"></i><b> Lluvia de Sobres</b></p>
@@ -64,29 +64,12 @@
                   <p class="descripcion spacing-top-20"><b>Invitados a la boda</b></p>
                   <p class="descripcion">A continuación veras los invitados que se te asignaron para ir a la boda, debes escoger si va a ir o no cada invitado</p>
                   <div class="spacing-top-20"></div>
-                  <!-- Dentro de este Div se inserta el código de los invitados   -->
-                  <div id="inv_principal" class="accordion"></div>
-               <!--  <details>
-                  <summary>Invitado Principal</summary>                 
-                <div class="caja-info">
-                  <p class="descripcion spacing-top-20"><b>Platos de Comida</b></p>
-                  <p class="descripcion">Escoge entre estos platos cual piensas consumir el día de nuestra boda:</p>
-                  <form action="">
-                    <img class="img-vest" src="assets/img/carne.jpeg">
-                      <p class="descripcion-box"><b>Carne a la Marinera.</b></p>
-                      <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
-                      <input type="radio" id="carne" value="carne">
-                      <label for="carne">Escoger este plato</label> 
-                    <img class="img-vest" src="assets/img/salmon.jpeg">
-                      <p class="descripcion-box"><b>Salmón.</b></p>
-                      <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
-                      <input type="radio" id="salmon" value="salmon">
-                      <label for="salmon">Escoger este plato</label> 
-                      <button type="submit" value="Enviar">Enviar</button>
+                  <form id="form_guess" action="gracias.html">
+                    <!-- Dentro de este Div se inserta el código de los invitados   -->
+                    <div id="inv_principal" class="accordion"></div>
+
+                    <button type="submit" value="enviar" class="btn-avanzar">Confirmar Invitados</button>
                   </form>  
-                </div>
-              </details> -->
-                <button class="btn-avanzar">Avanzar</button>
               </div>
             </div>
           </div>
