@@ -124,6 +124,7 @@ function addInfoGuess(){
           <div class="spacing-top-10"><p class="descripcion"><b>¿Confirmas la asistencia de ${guestFound.name} ${guestFound.lastname} a la boda?</b></p>
           <div class="center-input"><input type="radio" id="si-1" name="guess_1" value="si"><label class="l-guest" for="no">Si</label></div>
           <div class="center-input"><input type="radio" id="no-1" name="guess_1" value="no"><label class="l-guest" for="no"> No</label></div><br></div>
+          <input class="d-none" id="name_guest" name="nombre_invitado_principal" type="text" value="${nameGuest.value}"> 
           <span id="validation-guess" class="d-none v-guess">Debes confirmar al invitado 1</span>
           </div>
           </div>` 
@@ -177,6 +178,18 @@ if (formGuess != null) {
   })
 
 }
+
+// Conexion Google Sheets
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzZi2ux2bGxIkRzYThzMclvMANnxsgc1XsFayq_HqHP1slG50ZgLhZuzzQKHdMoFTh0/exec'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(() => { window.location = "gracias.html"; })
+  .catch(error => console.error('Error!', error.message))
+})
 
 
 
