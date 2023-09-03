@@ -35,6 +35,7 @@
                 <button class="btn-avanzar">Confirmar</button>
               </div>
               <div class="slide big-height">
+               
                 <p class="descripcion">Hola <b><span id="guest_name"></span></b>, estás invitado(a) a nuestra boda, 
                  <p id="text_guess" class="descripcion"></p>
                 <p class="descripcion spacing-top-20"><b>Información general de la boda</b></p>
@@ -67,7 +68,11 @@
                   <form id="form_guess" action="" name="contact-form">
                     <!-- Dentro de este Div se inserta el código de los invitados   -->
                     <div id="inv_principal" class="accordion"></div>
-                    <button type="submit" value="enviar" class="btn-avanzar">Confirmar Invitados</button>
+                     <!-- LOADER -->
+                    <div class="loader d-none" id="loader">
+                    </div>
+                    <!-- END LOADER -->
+                    <button id="btn-complete" type="submit" value="enviar" class="btn-avanzar">Confirmar Invitados</button>
                   </form>  
               </div>
             </div>
