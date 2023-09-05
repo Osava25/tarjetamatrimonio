@@ -38,8 +38,14 @@
    */
   
   h1 {
-    font-size: 4em;
+    font-size: 3em;
     margin: 0.67em 0;
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #3e3e3d;
   }
   
   /* Grouping content

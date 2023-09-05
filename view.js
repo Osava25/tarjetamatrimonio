@@ -14,7 +14,8 @@ const validationName = document.getElementById('validation-name');
 let formGuess = document.getElementById("form_guess");
 let textGuess = document.getElementById("text_guess");
 let loadValidation = document.getElementById("loader");
-let btnComplete = document.getElementById("btn-complete"); 
+let btnComplete = document.getElementById("btn-complete");
+let btnValidar = document.getElementById("btn-validar") 
 
 // CLASE INVITADOS
 class Guest{
@@ -23,17 +24,34 @@ class Guest{
     this.lastname = lastname;
     this.subGuest = subGuest;
     this.fullname = name + " " + lastname;
+    this.fullnameSp = name + " " + lastname + " ";
   } 
 }
+// INVITADOS OMAR
+let guests1 = new Guest("MARLON", "SANTIS", [new Guest("Invitado", "1")]);
+let guests2 = new Guest("MARJORIE", "SANTIS", [new Guest ("Invitado", "1"), new Guest("Invitado", "2")]);
+let guests3 = new Guest("CARLOS", "BELTRAN", [new Guest("Invitado", "1"), new Guest("Invitado", "2")]);
+let guests4 = new Guest("AURY", "OROZCO", [new Guest("Invitado", "1"), new Guest("Invitado", "2")]);
+let guests5 = new Guest("PEDRO", "TORRES", [new Guest("Invitado", "1"), new Guest("Invitado", "2")]);
+let guests6 = new Guest("SERGIO", "SOLANO", [new Guest("Invitado", "1"), new Guest("Invitado", "2")]);
+let guests7 = new Guest("LORENZO", "BELTRAN", [new Guest("Invitado", "1")]);
+let guests8 = new Guest("DANURIS", "GARCÍA", [new Guest("Invitado", "1")]);
+let guests9 = new Guest("JORGE", "OROZCO", [new Guest("Invitado", "1")]);
+let guests10 = new Guest("ISABEL", "SANTIS", [new Guest("Invitado", "1")]);
+let guests11 = new Guest("JAVIER", "RUEDA");
+let guests12 = new Guest("JORGE", "DE LA HOZ", [new Guest("Invitado", "1")]);
+let guests13 = new Guest("WILLIAM", "PRETTEL");
+let guests14 = new Guest("JUAN", "DÍAZ");
+let guests15 = new Guest("WENDY", "BUSTILLO", [new Guest("Invitado", "1")]);
+let guests16 = new Guest("ANGELY", "DE LIMA");
+let guests17 = new Guest("ANDREA", "PORRAS");
+let guests18 = new Guest("FRANK", "PRADA");
+let guests19 = new Guest("CRISTIAN", "CASTILLO");
 
-let guests1 = new Guest("OMAR", "SANTIS", [new Guest("Laura", "Guerrero"), new Guest("Luis", "Marinez")]);
-let guests2 = new Guest("RENE", "SANTIS", [new Guest ("Ana", "Perez"), new Guest("Carlos", "Rodriguez")]);
-let guests3 = new Guest("LAURA", "GUERRERO", [new Guest("Ana", "Perez"), new Guest("Carlos", "Rodriguez")]);
-let guests4 = new Guest("BETTY", "VARGAS", [new Guest("Alvaro", "Santis")]);
-let guests5 = new Guest("PEPITO", "PEREZ");
 
 
-let guestAll = [guests1, guests2, guests3, guests4, guests5];
+let guestAll = [guests1, guests2, guests3, guests4, guests5, guests6, guests7, guests8, guests9, guests10, guests11, guests12, guests13, guests14, guests15,
+                guests16, guests17, guests18, guests19];
 
 let slideIndex = 0;
 var isNameFieldValidate = false;
@@ -87,6 +105,13 @@ function isEqual(str1, str2) {
 let vGuess1 = false;
 let vGuess2 = false;
 
+// VALIDACION CLICK CON BOTÓN ENTER TECLADO
+
+nameGuest.addEventListener("keyup", function(event) {
+  if (event.code === 'Enter') {
+      validateName()
+  }
+});
 
 function validateName(){
   var inputGuessName = nameGuest.value.toUpperCase();
@@ -94,7 +119,7 @@ function validateName(){
       if (nameGuest.value == ""){
         vGuess1 = true; 
       }
-      else if (isEqual(element.fullname, inputGuessName)){
+      else if (isEqual(element.fullname, inputGuessName) || isEqual(element.fullnameSp, inputGuessName)){
         isNameFieldValidate = true;
         guestFound = element;
       }
@@ -119,9 +144,13 @@ function addInfoGuess(){
         
         // Filtro de invitados
         // Insertar invitados al DOM
-          if(guestFound.subGuest){
-            textGuess.innerHTML = `tienes <b>${guestFound.subGuest.length}</b> cupos disponibles para asistir a nuestra boda.` 
-          }         
+          if (guestFound.subGuest) {
+            textGuess.innerHTML = `tienes <b>${guestFound.subGuest.length + 1}</b> cupos disponibles.` 
+          }
+          else {
+            textGuess.innerHTML = `tienes <b>1</b> cupo disponible.` 
+          }
+                 
           guestNumber.innerHTML = `<input type="radio" name="toggle" class="accordion-toggle" checked /><div class="accordion-header">Invitado Titular ${guestFound.name} ${guestFound.lastname}</div><div class="accordion-content caja-info-acordeon">
           <div class="spacing-top-10"><p class="descripcion"><b>¿Confirmas la asistencia de ${guestFound.name} ${guestFound.lastname} a la boda?</b></p>
           <div class="center-input"><input type="radio" id="si-1" name="guess_1" value="si"><label class="l-guest" for="no">Si</label></div>
@@ -133,8 +162,8 @@ function addInfoGuess(){
 
           if(guestFound.subGuest != null){
             guestFound.subGuest.forEach(element => {
-              guestNumber.innerHTML += `<input type="radio" name="toggle" class="accordion-toggle" /><div class="accordion-header">${element.name} ${element.lastname}</div><div class="accordion-content caja-info-acordeon">
-              <div class="spacing-top-10"><p class="descripcion"><b>¿Confirmas la asistencia de ${element.name} ${element.lastname} a la boda?</b></p>
+              guestNumber.innerHTML += `<input type="radio" name="toggle" class="accordion-toggle" /><div class="accordion-header">Invitado ${nameGuess}</div><div class="accordion-content caja-info-acordeon">
+              <div class="spacing-top-10"><p class="descripcion"><b>¿Confirmas la asistencia del invitado ${nameGuess} a la boda?</b></p>
               <div class="center-input"><input type="radio" id="si-1" name="guess_${nameGuess}" value="si"><label class="l-guest" for="no">Si</label></div>
               <div class="center-input"><input type="radio" id="no-1" name="guess_${nameGuess}" value="no"><label class="l-guest" for="no"> No</label></div><br></div>
               <span id="validation-guess_${nameGuess}" class="v-guess d-none">Debes confirmar al invitado ${nameGuess}</span>

@@ -4,35 +4,41 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bienvenidos a mi Boda</title>
+        <title>Bienvenidos a la Boda de Laura y Omar</title>
+        <meta name="description" content="Ceremonia en Iglesia Divina Misericordia (Cra 70 # 85A Esquina) y Recepción salón Olyshouse (Calle 83 # 42A - 93.)"/>
+        <meta name="robots" content="noindex"/>
+        <meta name="robots" content="nofollow"/>
+        <meta property="og:title" content="Bienvenidos a la Boda de Laura y Omar"/>
+        <meta property="og:description" content="Ceremonia en Iglesia Divina Misericordia (Cra 70 # 85A Esquina) y Recepción salón Olyshouse (Calle 83 # 42A - 93.)"/>
+        <meta property="og:image" content="https://bodalauyomar.oruggo.com/assets/img/portada.jpeg"/>
         <link rel="stylesheet" media="screen" type="text/css" href="style.css">
-        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" media="screen" type="text/css" href="normalize.css">
     </head>
     <body>
+      <div class="background-image"></div>
        <div class="slider-container">
             <div class="slider">
               <div class="slide">
                 <p>Es Nuestra Boda</p>
                 <h1 class="spacing-top-20">Laura<br><span style="font-weight: 200;font-style: italic;text-transform: lowercase;">y</span> Omar</h1>
-                <h2>14 - 10 - 2023</h2>
-                <p>Sábado 5:00 pm</p>
+                <h2>14 . 10 . 2023</h2>
+                <p>Sábado 7:00 pm</p>
                 <p class="spacing-top-50">Iglesia Divina Misericordia</p>
                 <p>Cra 70 # 85A Esquina</p>
-                <p class="spacing-top-50 italic-text">Confirmación asistencia</p>
+                <p class="spacing-top-50 italic-text">Más información de la boda</p>
                 <p>↓</p>
                 <button class="btn-avanzar">Aquí</button>
               </div>
               <div class="slide">
-                <p class="descripcion">Para nosotros es muy importante que seas testigo de nuestra boda, 
-                  ingresa tu nombre y apellido en el campo de abajo y si estás en nuestra 
-                  lista de invitados tendrás la opción de confirmar tu asistencia</p>
+                <p class="descripcion">La magia del amor se hace realidad en nuestro día de boda. Tu presencia hace que este día sea aún más especial. 
+                  Ingresa tu nombre y apellido y confirma tu asistencia ¡Esperamos verte allí!</p>
                   <form id="form_name" action="">
                     <label class="field-guess">Ingresa tu Nombre y Apellido</label>
-                    <input id="name_guest" type="text" required="required" placeholder="Nombre y Apellido" value="">
-                    <p id="empty_name" class="text-validation d-none">Por favor ingresa tu nombre</p>
-                    <p id="validation-name" class="text-validation d-none">Lo siento, tu nombre no está en la lista de invitados</p>
+                    <input id="name_guest" type="text" required="required" placeholder="Ingresa tu Nombre y Apellido" value="">
+                    <p id="empty_name" class="text-validation d-none">Por favor ingresa tu nombre y apellido</p>
+                    <p id="validation-name" class="text-validation d-none">¡Oh! Parece que hay un error, verifica bien tu nombre y apellido</p>
                   </form>
-                <button class="btn-avanzar">Confirmar</button>
+                <button id="btn-validar" class="btn-avanzar">Confirmar</button>
               </div>
               <div class="slide big-height">
                
@@ -40,17 +46,22 @@
                  <p id="text_guess" class="descripcion"></p>
                 <p class="descripcion spacing-top-20"><b>Información general de la boda</b></p>
                 <div class="caja-info">
-                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha</b></p>
+                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha y hora ceremonia</b></p>
                   <p class="descripcion-box">Octubre 14, 2023</p>
+                  <p class="descripcion-box">Iglesia Divina Misericordia</p>
+                  <p class="descripcion-box">Cra 70 # 85A Esquina.</p>
+                  <p class="descripcion-box">Hora: 7:00pm</p>
+                </div>
+                <div class="caja-info">
+                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha y hora recepción</b></p>
+                  <p class="descripcion-box">Octubre 14, 2023</p>
+                  <p class="descripcion-box">Salón Olyshouse</p>
+                  <p class="descripcion-box">Calle 83 # 42A - 93.</p>
                   <p class="descripcion-box">Hora: 8:00pm</p>
                 </div>
                 <div class="caja-info">
                   <p class="descripcion-box"><i class="fa-solid fa-envelope" style="color: #3e3e3d;"></i><b> Lluvia de Sobres</b></p>
-                  <p class="descripcion-box">Contar con ustedes es nuestro mejor regalo. Pero si le desean pueden hacernos un obsequio.</p>
-                </div>
-                <div class="caja-info">
-                  <p class="descripcion-box"><i class="fa-solid fa-location-dot" style="color: #3e3e3d;"></i><b> Iglesia Divina Misericordia</b></p>
-                  <p class="descripcion-box">Cra 70 # 85A Esquina.</p>
+                  <p class="descripcion-box">Contar con ustedes es nuestro mejor regalo. Recibiremos con mucho amor cualquier obsequio.</p>
                 </div>
                 <div class="caja-info">
                   <p class="descripcion spacing-top-20"><b>Código de Vestimenta para Hombres y Mujéres</b></p>
@@ -58,7 +69,7 @@
                   <p class="descripcion-box"><b>Hombres.</b></p>
                   <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
                   <p class="descripcion-box"><b>Mujeres.</b></p>
-                  <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
+                  <p class="descripcion-box">Vestido de cóctel del color de tu preferencia a excepción de tonos blancos.</p>
                 </div>
                 <!-- Estructura Acordeon -->
                 

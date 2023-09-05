@@ -1,18 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;400&family=Roboto:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;500&family=Roboto:wght@700;900&display=swap');
 
 
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .slider-container {
-  background: url('assets/img/bg-movil.jpeg') center top no-repeat fixed;
   width: 500px;
   height: 100%;
   *max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  }
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(assets/img/bg-movil.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
   
   .slider {
     width: 300%;
@@ -22,7 +34,7 @@ body{
     justify-content: center;
     transition: transform 0.5s ease-in-out;
   }
-  .slider2{
+  .slider2 {
     height: 100%;
   }
   .slider_thanks {
@@ -38,7 +50,7 @@ body{
   }
   
   h1 {
-    font-size: 61px;
+    font-size: 3em;
       text-align: right;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -48,7 +60,7 @@ body{
       color: #3e3e3d;
   }
 
-  h2{
+  h2 {
     font-size: 41px;
       text-align: right;
       font-family: 'Cormorant Garamond', serif;
@@ -77,22 +89,22 @@ body{
     cursor: pointer;
     float: right;
   }
-  .spacing-top-10{
+  .spacing-top-10 {
     margin-top: 10px;
   }
-  .spacing-top-20{
+  .spacing-top-20 { 
     margin-top: 20px;
   }
-  .spacing-top-50{
+  .spacing-top-50 {
     margin-top: 50px;
   }
-  .spacing-bottom-10{
+  .spacing-bottom-10 {
     margin-bottom: 10px;
   }
-  .spacing-bottom-20{
+  .spacing-bottom-20 {
     margin-bottom: 20px;
   }
-  p.italic-text{
+  p.italic-text {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     text-transform: capitalize;
@@ -115,10 +127,10 @@ body{
     font-size: 1.3em;
     letter-spacing: normal;
   }
-  form{
+  form {
     margin-top: 20px;
   }
-  label{
+  label {
     font-family: 'Josefin Sans', sans-serif;
     color: #3e3e3d;
     font-size: 18px;
@@ -126,7 +138,7 @@ body{
     text-align: center;
     display: block;
   }
-  .l-guest{
+  .l-guest {
     display: inline-block;
     width: 20px;
     font-size: 16px;
@@ -150,14 +162,14 @@ body{
     width: 40px;
     margin: 0 auto;
   }
-  .caja-info{
+  .caja-info {
     border: #3e3e3d 1px solid;
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 20px;
     background-color: #fff;
   }
-  .caja-info-acordeon{
+  .caja-info-acordeon {
     *border: #3e3e3d 1px solid;
     padding: 10px 20px;
     background-color: #fff;
@@ -255,13 +267,13 @@ body{
     content:'-';
   }
   
-  .accordion-toggle:hover + .accordion-header{
+  .accordion-toggle:hover + .accordion-header {
     background-color: #f7f1f1;
   }
   .accordion-toggle:checked + .accordion-header {
     background-color: #fff;
   }
-  .v-guess{
+  .v-guess {
     color: red;
     font-size: 12px;
     width: 45%;
@@ -269,24 +281,10 @@ body{
     padding: 0;
   }
 
-  @media only screen and (max-width: 768px) {
-     /* .slide {
-      width: 100%;
-    }
-    
-    .slider-container{
-      background: url('assets/img/bg-movil.jpeg') center center/cover no-repeat fixed;
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      overflow: hidden;
-    } */
-  } 
   
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 568px) {
     h1 {
-      font-size: 61px;
+      font-size: 3em;
       text-align: right;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
@@ -306,7 +304,7 @@ body{
     p {
       text-align: right;
       font-family: 'Josefin Sans', sans-serif;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 1em;
       margin: 5px 0px;
       text-transform: uppercase;
@@ -322,20 +320,19 @@ body{
     }
     .slide {
       width: 100%;
-      height: 100%;
-      margin-top: 150px;
+      height: 70%;
+      margin-top: 10vh;
       margin-bottom: 50px;
       padding-right: 20px;
       padding-left: 20px;
     }
+    
     .slider-container {
-      background: url('assets/img/bg-movil.jpeg') center center/cover no-repeat fixed;
+      position: relative;
+      z-index: 1;
       width: 100%;
-      height: 100%;
-      *max-width: 100%;
-      margin: 0 auto;
-      overflow: hidden;
     }
+    
   }
  
 .loader {
