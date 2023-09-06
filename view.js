@@ -15,7 +15,10 @@ let formGuess = document.getElementById("form_guess");
 let textGuess = document.getElementById("text_guess");
 let loadValidation = document.getElementById("loader");
 let btnComplete = document.getElementById("btn-complete");
-let btnValidar = document.getElementById("btn-validar") 
+let btnValidar = document.getElementById("btn-validar");
+const formName = document.forms['form_name'];
+const form = document.forms['contact-form']
+
 
 // CLASE INVITADOS
 class Guest{
@@ -47,11 +50,13 @@ let guests16 = new Guest("ANGELY", "DE LIMA");
 let guests17 = new Guest("ANDREA", "PORRAS");
 let guests18 = new Guest("FRANK", "PRADA");
 let guests19 = new Guest("CRISTIAN", "CASTILLO");
+let guests20 = new Guest("OMAR", "SANTIS", [new Guest("Invitado", "1"), new Guest("Invitado", "2")]);
+
 
 
 
 let guestAll = [guests1, guests2, guests3, guests4, guests5, guests6, guests7, guests8, guests9, guests10, guests11, guests12, guests13, guests14, guests15,
-                guests16, guests17, guests18, guests19];
+                guests16, guests17, guests18, guests19, guests20];
 
 let slideIndex = 0;
 var isNameFieldValidate = false;
@@ -105,13 +110,6 @@ function isEqual(str1, str2) {
 let vGuess1 = false;
 let vGuess2 = false;
 
-// VALIDACION CLICK CON BOTÓN ENTER TECLADO
-
-nameGuest.addEventListener("keyup", function(event) {
-  if (event.code === 'Enter') {
-      validateName()
-  }
-});
 
 function validateName(){
   var inputGuessName = nameGuest.value.toUpperCase();
@@ -176,7 +174,6 @@ function addInfoGuess(){
 
 // URL y constante Conexion Google Sheets
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzZi2ux2bGxIkRzYThzMclvMANnxsgc1XsFayq_HqHP1slG50ZgLhZuzzQKHdMoFTh0/exec'
-const form = document.forms['contact-form']
 // Validación form confirmación invitados
 if (form != null) {
   form.addEventListener("submit", function(event){

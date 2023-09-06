@@ -32,13 +32,13 @@
               <div class="slide">
                 <p class="descripcion">La magia del amor se hace realidad en nuestro día de boda. Tu presencia hace que este día sea aún más especial. 
                   Ingresa tu nombre y apellido y confirma tu asistencia ¡Esperamos verte allí!</p>
-                  <form id="form_name" action="">
+                  <form onsubmit="return false;" id="form_name">
                     <label class="field-guess">Ingresa tu Nombre y Apellido</label>
                     <input id="name_guest" type="text" required="required" placeholder="Ingresa tu Nombre y Apellido" value="">
                     <p id="empty_name" class="text-validation d-none">Por favor ingresa tu nombre y apellido</p>
                     <p id="validation-name" class="text-validation d-none">¡Oh! Parece que hay un error, verifica bien tu nombre y apellido</p>
+                    <button id="btn-validar" class="btn-avanzar">Confirmar</button>
                   </form>
-                <button id="btn-validar" class="btn-avanzar">Confirmar</button>
               </div>
               <div class="slide big-height">
                
@@ -46,14 +46,14 @@
                  <p id="text_guess" class="descripcion"></p>
                 <p class="descripcion spacing-top-20"><b>Información general de la boda</b></p>
                 <div class="caja-info">
-                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha y hora ceremonia</b></p>
+                  <p class="descripcion-box"><i class="fa-solid fa-church" style="color: #3e3e3d;"></i><b> Fecha y hora ceremonia</b></p>
                   <p class="descripcion-box">Octubre 14, 2023</p>
                   <p class="descripcion-box">Iglesia Divina Misericordia</p>
                   <p class="descripcion-box">Cra 70 # 85A Esquina.</p>
                   <p class="descripcion-box">Hora: 7:00pm</p>
                 </div>
                 <div class="caja-info">
-                  <p class="descripcion-box"><i class="fa-solid fa-calendar" style="color: #3e3e3d;"></i><b> Fecha y hora recepción</b></p>
+                  <p class="descripcion-box"><i class="fa-solid fa-champagne-glasses" style="color: #3e3e3d;"></i><b> Fecha y hora recepción</b></p>
                   <p class="descripcion-box">Octubre 14, 2023</p>
                   <p class="descripcion-box">Salón Olyshouse</p>
                   <p class="descripcion-box">Calle 83 # 42A - 93.</p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="caja-info">
                   <p class="descripcion spacing-top-20"><b>Código de Vestimenta para Hombres y Mujéres</b></p>
-                  <img class="img-vest" src="assets/img/cod-vest.png">
+                  <img class="img-vest" src="assets/img/cod-vest2.jpeg">
                   <p class="descripcion-box"><b>Hombres.</b></p>
                   <p class="descripcion-box">Guayabera o Camisa de lino blanca y pantalón de cualquier color.</p>
                   <p class="descripcion-box"><b>Mujeres.</b></p>
