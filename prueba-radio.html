@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario con Radio Buttons</title>
+    <script>
+        function validarFormulario() {
+            var mayorEdad = document.getElementsByName("mayor_edad");
+            var fumador = document.getElementsByName("fumador");
+            var estudiante = document.getElementsByName("estudiante");
+
+            if (!validarRadioButtons(mayorEdad) || !validarRadioButtons(fumador) || !validarRadioButtons(estudiante)) {
+                alert("Por favor, responda a todas las preguntas.");
+                return false;
+            }
+            return true;
+        }
+
+        function validarRadioButtons(radioButtons) {
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form onsubmit="return validarFormulario()">
+        <p>¿Eres mayor de edad?</p>
+        <input type="radio" name="mayor_edad" value="si"> Sí
+        <input type="radio" name="mayor_edad" value="no"> No
+
+        <p>¿Eres fumador?</p>
+        <input type="radio" name="fumador" value="si"> Sí
+        <input type="radio" name="fumador" value="no"> No
+
+        <p>¿Eres estudiante?</p>
+        <input type="radio" name="estudiante" value="si"> Sí
+        <input type="radio" name="estudiante" value="no"> No
+
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
