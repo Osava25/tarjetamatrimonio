@@ -104,6 +104,14 @@ let guests64 = new Guest("GISELLY", "GUERRERO", [new Guest("Invitado", "1")]);
 let guests65 = new Guest("ANGELO", "FERNANDEZ", [new Guest("Invitado", "1")]);
 let guests66 = new Guest("VALENTINA", "PEREZ", [new Guest("Invitado", "1")]);
 let guests67 = new Guest("LILIAM", "SOLANO");
+let guests68 = new Guest("JAIR", "CEPEDA", [new Guest("Invitado", "1")]);
+let guests69 = new Guest("DIVIANIS", "TORRES");
+let guests70 = new Guest("MIGUEL", "FRUTO", [new Guest("Invitado", "1")]);
+let guests71 = new Guest("JHONNY", "PEREZ", [new Guest("Invitado", "1")]);
+
+
+
+
 
 
 
@@ -112,7 +120,7 @@ let guestAll = [guests1, guests2, guests3, guests4, guests5, guests6, guests7, g
                 guests16, guests17, guests18, guests19, guests20, guests21, guests22, guests23, guests24, guests25, guests26, guests27, guests28, guests29,
                 guests30, guests31, guests32, guests33, guests34, guests35, guests36, guests37, guests38, guests39, guests40, guests41, guests42, guests43,
                 guests44, guests45, guests46, guests47, guests48, guests49, guests50, guests51, guests52, guests53, guests54, guests55, guests56, guests57, 
-                guests58, guests59, guests60, guests61, guests62, , guests63, guests64, guests65, guests66, guests67];
+                guests58, guests59, guests60, guests61, guests62, , guests63, guests64, guests65, guests66, guests67, guests68, guests69, guests70, guests71];
 
 let slideIndex = 0;
 var isNameFieldValidate = false;
